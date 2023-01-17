@@ -11,7 +11,7 @@ This plugins has official support for Minecraft 1.17
 * Practical admin interface to quickly add and remove presents with a wand
 * Multi-language support
 
-<img src="https://raw.githubusercontent.com/ScoutCraft-Scouting-Nederland/.github/master/images/hangman.png" alt="screenshot" width="700"/>
+<img src="https://raw.githubusercontent.com/ScoutCraft-Scouting-Nederland/.github/master/images/presenthunt.png" alt="screenshot" width="700"/>
 
 ### Dependencies
 * EagleServer
