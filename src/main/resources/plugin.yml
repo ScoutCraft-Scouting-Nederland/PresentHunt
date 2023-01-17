@@ -1,0 +1,11 @@
+name: '${project.artifactId}'
+version: '${project.version}'
+main: nl.scoutcraft.presenthunt.PresentHunt
+api-version: 1.17
+authors: [ Acixsi, DuLangamer, rijsberhp ]
+website: https://scoutcraft.nl
+depend:
+  - EagleServer
+commands:
+  hunt:
+    usage: /<command>

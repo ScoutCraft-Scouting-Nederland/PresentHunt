@@ -1,0 +1,38 @@
+# THIS IS CODE FOR USAGE OF COLLECTIBLE
+  if (player.getInventory().getItemInMainHand().equals(Item.COLLECTIBLE)) {
+    if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_AIR) {
+    new BukkitRunnable() {
+    double t = 0;
+    final Location loc = player.getEyeLocation();
+    final Vector direction = loc.getDirection().normalize();
+    
+    public void run() {
+    t = t + 0.5;
+    double x = direction.getX() * t;
+    double y = direction.getY() * t;
+    double z = direction.getZ() * t;
+    
+    loc.add(x, y, z);
+    player.getWorld().spawnParticle(Particle.SNOWBALL, loc, 5, 0, 0, 0, 1);
+    player.getWorld().spawnParticle(Particle.SNOWFLAKE, loc, 0, 0, 0, 0, 1);
+
+  for (Entity e: loc.getChunk().getEntities()) {
+    if (!e.equals(player) && e instanceof Player checkPlayer) {
+    if (checkPlayer.getLocation().distance(loc) < 0.5 || checkPlayer.getEyeLocation().distance(loc) < 0.5) {
+    player.hidePlayer(PresentHunt.getInstance(), checkPlayer);
+    player.getWorld().spawnParticle(Particle.SNOWBALL, loc, 25, 1, 1.5, 1, 1);
+    player.getWorld().spawnParticle(Particle.SNOWFLAKE, loc, 5, 1, 1.5, 1, 1);
+    this.cancel();
+    }
+    }
+  }
+
+    loc.subtract(x, y, z);
+    
+    if (t > 30) {
+    this.cancel();
+  }
+  }
+  }.runTaskTimer(PresentHunt.getInstance(), 0, 1);
+  }
+  }
