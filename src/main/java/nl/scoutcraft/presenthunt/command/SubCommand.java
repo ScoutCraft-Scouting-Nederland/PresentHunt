@@ -3,6 +3,9 @@ package nl.scoutcraft.presenthunt.command;
 import nl.scoutcraft.eagle.server.locale.IMessage;
 import org.bukkit.entity.Player;
 
+/**
+ * It's a class that represents a sub command
+ */
 public abstract class SubCommand {
 
     private final IMessage<String> message;

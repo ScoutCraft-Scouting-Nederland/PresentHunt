@@ -9,6 +9,11 @@ import org.bukkit.event.block.BlockBreakEvent;
 
 public class BlockBreakListener implements Listener {
 
+    /**
+     * If the player doesn't have permission to break presents, cancel the event
+     * 
+     * @param event The event that was called.
+     */
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
         if (!Data.existsPresent(event.getBlock()))

@@ -7,6 +7,9 @@ import nl.scoutcraft.eagle.server.locale.Message;
 import nl.scoutcraft.eagle.server.locale.MessagePlaceholder;
 import nl.scoutcraft.presenthunt.PresentHunt;
 
+/**
+ * It's a class that contains all the messages that are used in the plugin
+ */
 public final class Locale {
 
     private static final Internationalization LANG = PresentHunt.getInstance().getLang();

@@ -45,6 +45,9 @@ public final class PresentHunt extends JavaPlugin {
 
     }
 
+    /**
+     * It registers all of the event listeners
+     */
     private void initialize() {
         PluginManager pluginManager = this.getServer().getPluginManager();
         pluginManager.registerEvents(new BlockBreakListener(), this);
@@ -54,10 +57,20 @@ public final class PresentHunt extends JavaPlugin {
         this.getCommand("hunt").setExecutor(new MainCommand());
     }
 
+    /**
+     * This function returns the instance of the plugin.
+     * 
+     * @return The instance of the plugin.
+     */
     public static PresentHunt getInstance() {
         return plugin;
     }
 
+    /**
+     * This function returns the language of the current user
+     * 
+     * @return The value of the lang variable.
+     */
     public Internationalization getLang() {
         return this.lang;
     }

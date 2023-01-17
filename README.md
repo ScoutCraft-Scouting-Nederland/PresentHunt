@@ -15,8 +15,6 @@ This plugins has official support for Minecraft 1.17
 
 ### Dependencies
 * EagleServer
-
-## Installation
 ## Installation
 1. Compile the plugin with Maven, or download the latest version from the releases page
 2. Download *EagleServer*

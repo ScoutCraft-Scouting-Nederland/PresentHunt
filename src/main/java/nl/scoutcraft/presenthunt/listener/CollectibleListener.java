@@ -21,10 +21,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class
+// A listener that listens to the `ProjectileLaunchEvent` and `ProjectileHitEvent` events.
 CollectibleListener implements Listener {
 
     private final Map<Integer, BukkitTask> runnable = new HashMap<>();
 
+    /**
+     * If a player throws a snowball, and the snowball is a collectible, and the player can fly, then
+     * the player will fly with the snowball
+     * 
+     * @param event The event that is being listened for.
+     */
     @EventHandler
     public void onCollectibleInteract(ProjectileLaunchEvent event) {
         if (event.getEntity().getType() != EntityType.SNOWBALL
@@ -53,6 +60,11 @@ CollectibleListener implements Listener {
         );
     }
 
+    /**
+     * If a snowball hits something, cancel the runnable and give the player the ability to fly again
+     * 
+     * @param event The event that is being listened to.
+     */
     @EventHandler
     public void onCollectibleHit(ProjectileHitEvent event) {
         if (event.getEntity().getType() != EntityType.SNOWBALL) return;

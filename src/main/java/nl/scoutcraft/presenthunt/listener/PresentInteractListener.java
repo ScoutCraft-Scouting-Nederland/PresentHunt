@@ -21,6 +21,12 @@ import java.util.UUID;
 
 public class PresentInteractListener implements Listener {
 
+    /**
+     * If the player is holding a present wand, they can remove or add presents. If they're not holding
+     * a present wand, they can collect presents
+     * 
+     * @param event The event that is being listened to.
+     */
     @EventHandler
     public void onPresentInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();

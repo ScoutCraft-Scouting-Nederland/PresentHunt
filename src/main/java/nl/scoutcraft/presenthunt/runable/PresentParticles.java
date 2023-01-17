@@ -7,6 +7,9 @@ import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.scheduler.BukkitRunnable;
 
+/**
+ * It spawns particles around presents every 5 ticks.
+ */
 public class PresentParticles extends BukkitRunnable {
 
     private final PresentHunt plugin;
@@ -15,10 +18,17 @@ public class PresentParticles extends BukkitRunnable {
         this.plugin = plugin;
     }
 
+    /**
+     * Start a repeating task that runs every 5 ticks (1/4 second)
+     */
     public void start() {
         runTaskTimerAsynchronously(this.plugin, 0L, 5L);
     }
 
+    /**
+     * For each present, spawn a particle for each online player, with a different color depending on
+     * whether or not they've collected the present
+     */
     @Override
     public void run() {
         if (this.plugin.getServer().getOnlinePlayers().size() <= 0 || Data.PRESENTS.isEmpty())
