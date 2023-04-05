@@ -42,4 +42,4 @@ You are welcome to change this plugin to your liking. Fixes for bugs will be add
 We thank all people who worked on this plugin, with planning, coding, testing, fixing bugs, etc:
 - [@Acixsi](https://github.com/Acixsi)
 - [@DuLangamer](https://github.com/dulangamer)
-- [@lokerhp](https://github.com/lokerhp
+- [@lokerhp](https://github.com/lokerhp)
